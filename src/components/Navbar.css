@@ -1,0 +1,20 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: rgba(126, 123, 123,0.8);
+    color: #d83e3e;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .navbar a {
+    color:#f0f0f0;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+  }
+  
