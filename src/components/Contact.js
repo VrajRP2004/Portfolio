@@ -7,32 +7,27 @@ const Contact = () => {
       <p style={styles.paragraph}>Feel free to reach out to me through any of the following platforms:</p>
       
       <div style={styles.linkContainer}>
-        {/* Email Icon */}
         <a href="mailto:vrajrp4@gmail.com" target="_blank" rel="noopener noreferrer" style={styles.link}>
           <img src="https://img.icons8.com/ios-filled/50/000000/mail.png" alt="Email" style={styles.icon} />
         </a>
 
-        {/* LinkedIn Icon */}
         <a href="https://www.linkedin.com/in/vraj-prajapati-262600236/" target="_blank" rel="noopener noreferrer" style={styles.link}>
           <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" style={styles.icon} />
         </a>
 
-        {/* Twitter Icon */}
         <a href="https://x.com/vraj_6fb" target="_blank" rel="noopener noreferrer" style={styles.link}>
           <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" style={styles.icon} />
         </a>
 
-        {/* GitHub Icon */}
         <a href="https://github.com/VrajRP2004" target="_blank" rel="noopener noreferrer" style={styles.link}>
           <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style={styles.icon} />
         </a>
-
       </div>
     </section>
   );
 };
 
-// Inline CSS for styling
+// Inline CSS with responsive styles
 const styles = {
   contactSection: {
     backgroundColor: '#222',
@@ -60,6 +55,7 @@ const styles = {
     justifyContent: 'center',
     gap: '20px',
     marginTop: '20px',
+    flexWrap: 'wrap', // Allows wrapping for smaller screens
   },
   link: {
     display: 'inline-block',
@@ -70,10 +66,19 @@ const styles = {
     transition: 'all 0.3s ease-in-out',
   },
   icon: {
-    width: '40px', // Adjust icon size
+    width: '40px',
     height: '40px',
     transition: 'transform 0.3s ease',
   },
 };
+
+// Add media queries
+if (window.innerWidth < 768) {
+  styles.heading.fontSize = '2rem';
+  styles.paragraph.fontSize = '1rem';
+  styles.linkContainer.gap = '10px';
+  styles.icon.width = '30px';
+  styles.icon.height = '30px';
+}
 
 export default Contact;

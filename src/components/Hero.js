@@ -1,5 +1,6 @@
 import React from 'react';
-import img from './Profile.png'
+import img from './Profile.png';
+
 const Hero = () => {
   return (
     <section style={styles.heroSection}>
@@ -14,7 +15,7 @@ const Hero = () => {
   );
 };
 
-// Inline CSS for styling
+// Inline CSS with Responsive Styling
 const styles = {
   heroSection: {
     display: 'flex',
@@ -26,10 +27,12 @@ const styles = {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     maxWidth: '1200px',
     margin: '0 auto',
+    flexWrap: 'wrap', // Allows wrapping for smaller screens
   },
   textContainer: {
     flex: 1,
     paddingRight: '20px',
+    minWidth: '300px', // Ensures minimum width for readability
   },
   heading: {
     fontSize: '3rem',
@@ -42,13 +45,24 @@ const styles = {
   imageContainer: {
     flex: 1,
     textAlign: 'center',
+    minWidth: '300px', // Ensures minimum width on smaller screens
+    marginTop: '20px', // Adds space when stacked on smaller screens
   },
   image: {
-    width: '300px', // Adjust size as needed
+    width: '100%',
+    maxWidth: '300px', // Limits image size for larger screens
     height: 'auto',
     borderRadius: '50%',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   },
 };
+
+// Responsive media query styles
+if (window.innerWidth < 768) {
+  styles.heroSection.flexDirection = 'column';
+  styles.heading.fontSize = '2rem';
+  styles.paragraph.fontSize = '1rem';
+  styles.textContainer.paddingRight = '0';
+}
 
 export default Hero;

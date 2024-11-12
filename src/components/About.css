@@ -1,47 +1,100 @@
 /* About.css */
 
 .about {
-    padding: 4rem 2rem;
-    text-align: center;
-    color: #333;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.about h2 {
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+.about h3 {
+  color: #f0f0f0;
+  margin-top: 2rem;
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-content p {
+  margin-bottom: 1.2rem;
+  color: #f0f0f0;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-list li {
+  background-color: #f0f0f0;
+  padding: 0.6rem;
+  margin: 0.4rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.skills-list li:hover {
+  background-color: #ccc;
+  color: #222;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 1rem;
   }
-  h3{
-    color: #f0f0f0;
-  }
-  
+
   .about h2 {
-    color: #f0f0f0;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
   }
-  
+
+  .about h3 {
+    font-size: 1.5rem;
+  }
+
   .about-content {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
   }
-  
-  .about-content p {
-    margin-bottom: 1.2rem;
-    color: #f0f0f0;
-  }
-  
-  .skills-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 1rem;
-  }
-  
+
   .skills-list li {
-    background-color: #f0f0f0;
-    padding: 0.6rem;
-    margin: 0.4rem 0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    min-width: 100px;
   }
-  
-  .skills-list li:hover {
-    background-color: #f0f0f0;
-    color: #222;
+}
+
+@media (max-width: 480px) {
+  .about h2 {
+    font-size: 1.5rem;
   }
-  
+
+  .about h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-content {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .skills-list li {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+}

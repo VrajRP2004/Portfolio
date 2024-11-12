@@ -5,21 +5,6 @@ body {
   overflow-x: hidden;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  /* color: #333; */
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-}
-
-.navbar a {
-  /* color: #333; */
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-}
 
 .hero {
   display: flex;

@@ -2,7 +2,8 @@
 
 .navbar {
     display: flex;
-    justify-content: center;
+    /* justify-content: ; */
+    align-items: center;
     padding: 1rem 2rem;
     background: rgba(126, 123, 123,0.8);
     color: #d83e3e;
